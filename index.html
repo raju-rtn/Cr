@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CourseScope | Honest Course Reviews</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="top-nav">
+        <h1>CourseScope</h1>
+        <button id="scrollToForm" class="cta">Write a Review</button>
+      </nav>
+      <div class="hero-copy">
+        <p class="badge">Glassdoor for Courses</p>
+        <h2>Find the right class before you enroll.</h2>
+        <p>
+          Read candid student reviews on workload, grading fairness, teaching quality,
+          and practical value.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section class="filters card">
+        <h3>Browse Reviews</h3>
+        <div class="filter-grid">
+          <label>
+            Course
+            <select id="courseFilter">
+              <option value="all">All Courses</option>
+            </select>
+          </label>
+          <label>
+            Minimum Rating
+            <select id="ratingFilter">
+              <option value="0">Any Rating</option>
+              <option value="5">5 Stars</option>
+              <option value="4">4+ Stars</option>
+              <option value="3">3+ Stars</option>
+            </select>
+          </label>
+          <label>
+            Search
+            <input id="searchFilter" type="text" placeholder="Professor or keyword" />
+          </label>
+        </div>
+      </section>
+
+      <section class="reviews-section">
+        <div id="reviewStats" class="stats"></div>
+        <div id="reviewsContainer" class="reviews-grid"></div>
+      </section>
+
+      <section id="reviewFormSection" class="card form-card">
+        <h3>Share Your Experience</h3>
+        <form id="reviewForm">
+          <div class="form-grid">
+            <label>
+              Course Name
+              <input name="course" required placeholder="e.g., CS101 - Intro to Programming" />
+            </label>
+            <label>
+              Professor
+              <input name="professor" required placeholder="e.g., Dr. Shah" />
+            </label>
+            <label>
+              Overall Rating
+              <select name="rating" required>
+                <option value="">Select</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Good</option>
+                <option value="3">3 - Average</option>
+                <option value="2">2 - Tough</option>
+                <option value="1">1 - Avoid</option>
+              </select>
+            </label>
+            <label>
+              Difficulty
+              <select name="difficulty" required>
+                <option value="">Select</option>
+                <option>Easy</option>
+                <option>Moderate</option>
+                <option>Hard</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            Review
+            <textarea
+              name="review"
+              rows="5"
+              required
+              placeholder="How was teaching quality, workload, grading, and usefulness?"
+            ></textarea>
+          </label>
+          <button type="submit" class="cta">Submit Review</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built for students to make smarter course choices.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
